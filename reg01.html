@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>使用方法</title>
+</head>
+<body>
+    <script>
+
+          var str1="123Qwefghjkl097";
+           // 构造函数
+          var reg1=new RegExp("qwe","g");
+          console.log(reg1.test(str1));
+          // 字面量
+          var reg2=/123/gi;
+          console.log(reg2.test(str1));
+
+          // 区别
+          var str2="abc123def456";
+          var reg3=new RegExp('\\d',"g");
+          console.log(reg3.exec(str2));
+          console.log(reg3.lastIndex);
+
+          console.log(reg3.exec(str2));
+          console.log(reg3.lastIndex);
+
+
+          var reg4=new RegExp('\e','g');
+          console.log(reg4.exec(str2));
+
+
+          var reg5=/\d/g;
+          console.log(reg5.exec(str2));
+
+    </script>
+</body>
+</html>

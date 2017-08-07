@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表达式匹配</title>
+</head>
+<body>
+
+<!-- [] 匹配中括号中的任意字符-->
+<script>
+  var str1="abc123ert";
+  var reg1=/[bc23]/g;
+  console.log(str1.match(reg1));
+</script>
+<!-- [^xx]除却xx以外的其他字符 -->
+<script>
+  var str2="qwert123zxc";
+  var reg2=/[^qwer3]/g;
+  console.log(str2.match(reg2));
+</script>
+<!-- [0-9] 匹配的是0到9的数字-->
+<script>
+  var str3="1234qwe56";
+  var reg3=/[0-9]/g;
+  console.log(str3.match(reg3));
+</script>
+<!-- [a-z] 匹配的是小a到小z-->
+<script>
+  var str4="abcABC567890Oo";
+  var reg4=/[a-z]/g;
+  var reg5=/[A-Z]/g;
+  console.log(str4.match(reg4));
+   console.log(str4.match(reg5));
+</script>
+<!-- [A-Z] 匹配的是小a到小z-->
+<!-- \w等同于[a-zA-Z0-9_] -->
+
+</body>
+</html>

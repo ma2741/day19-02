@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>长度</title>
+</head>
+<body>
+    <!--  +匹配长度至少1个  >=1-->
+    <script>
+      var str1="qwertyuiozxwwcvbw";
+      var reg1=/w+/g;
+      console.log(str1.match(reg1));
+    </script>
+    <!-- ？ 匹配的是0个或者1个-->
+    <script>
+      var str2="abcaaeeeee";
+      var reg2=/e?/g;
+      console.log(reg2.test(str2));
+      console.log(str2.match(reg2));
+    </script>
+    <!-- *匹配0个或者多个 -->
+  <script>
+    var str3="aabcaaabbeeee";
+    var reg3=/a*/g;
+    console.log(str3.match(reg3));
+  </script>
+  <!-- {4}匹配4个  {2,3} 匹配的是2到3个 {2,}匹配的是2到多个-->
+  <script>
+    var str4="abbcccbbbddddbbbberbbbbbty";
+    var reg4=/b{2,}/g;
+    console.log(str4.match(reg4));
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>座机(有bug案例)</title>
+</head>
+<body>
+  <input type="text" id="zuji" onblur="aa()">
+  <span id="zuoji">
+  </span>
+  <script>
+    function aa(){
+      var zuji=document.getElementById('zuji').value;
+      var zuoji=document.getElementById("zuoji");
+      var str=/[0-9]{4}[^0-9]6[0-9]{7}/g;
+      if(zuji.match(str)==null){
+        zuoji.innerHTML='输入有误，请重新输入';
+      }else{
+        zuoji.innerHTML='输入正确';
+      }
+    }
+  </script>
+</body>
+</html>

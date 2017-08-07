@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>元字符</title>
+</head>
+<body>
+      <!-- \s:用来匹配空格 -->
+      <script>
+          var str1="abc 123qwwerty";
+          var reg1=/\s/g;
+          console.log(reg1.exec(str1));
+      </script>
+      <!-- \b用来匹配字符串、单词的边界 -->
+      <script>
+        var str2="ab cd hello world";
+        var reg2=/\bcd\b/g;
+        var reg3=/\bll/g;
+         console.log(reg3.exec(str2));
+      </script>
+      <!-- \w匹配 （数字，字母， 下划线） -->
+      <script>
+        var str3=" -1_13245";
+        var reg4=/\w/g;
+        console.log(reg4.exec(str3));
+      </script>
+      <!-- .用来匹配除换行以外的其他字符 -->
+      <script>
+        var str4="\n.dfghefdwef";
+        var reg5=/./g;
+        console.log(reg5.exec(str4));
+      </script>
+      <!-- /n匹配换行 -->
+</body>
+</html>

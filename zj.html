@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>固话</title>
+</head>
+<body>
+       <!--  xxx-12345678
+        xxxx-12345678 -->
+       <!--  \d{3,4}-\d{7,8} -->
+        固定电话的正则匹配:
+        <input type="text" id="inp">
+        <script>
+
+              var inp1=document.getElementById("inp");
+              var reg=/^\d{3,4}-[0-9]{7,8}$/;
+              inp1.onblur=function(){
+                 var inp=document.getElementById("inp").value;
+                  if(!reg.test(inp)){
+                      alert("你错了，再来一次!!!");
+                  }else{
+                    alert("恭喜你，答对了!!!");
+                  }
+              }
+
+        </script>
+</body>
+</html>

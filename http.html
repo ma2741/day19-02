@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>网址</title>
+</head>
+<body>
+          <!-- http://www.w3school.com.cn -->
+
+          <input type="text" id="hp">
+          <script>
+            var hp=document.getElementById("hp");
+            var reg=/^https?\:\/\/www\.w3school(\.[a-z]{2,3}){1,3}$/;
+            hp.onblur=function (){
+                var hp1=document.getElementById("hp").value;
+                if(reg.test(hp1)){
+                  alert("网址输入正确!!!")
+                }else{
+                  alert("怎么这么笨，你又输错了！！！")
+                }
+
+            }
+          </script>
+</body>
+</html>

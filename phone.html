@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>手机号的匹配</title>
+  <style>
+    #inp{
+      color:red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+        <input type="text" id="phone" onblur="aa()">
+        <div id="inp">您输入的手机号格式不对，请重新输入！</div>
+        <!-- 手机号：1[3578][0-9]{9} -->
+        <script>
+            function aa(){
+              var str=document.getElementById("phone").value;
+              var inp=document.getElementById("inp");
+              var reg=/1[3578][0-9]{9}/g;
+              if(!reg.test(str)){
+                    inp.style.display="block";
+              }else{
+                inp.style.display="none";
+                alert("您输入的手机号格式正确！！！")
+              }
+            }
+            // 完成上述实例，并尝试做出座机号码的正则匹配
+
+        </script>
+</body>
+</html>

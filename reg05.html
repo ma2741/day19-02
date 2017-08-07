@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>匹配开头、结尾等地方</title>
+</head>
+<body>
+     <!-- ^起始值-->
+     <script>
+       var str1="abc1234qwe";
+       var reg1=/^ab/g;
+       console.log(reg1.test(str1));
+     </script>
+     <!-- $字符串的结尾 -->
+     <script>
+       var str2="13qwertplm567";
+       var reg2=/m$/g;
+       console.log(reg2.test(str2));
+     </script>
+     <!-- ^$ -->
+     <script>
+       var str3="123abc";
+       var reg3=/^1c$/;
+       console.log(reg3.test(str3));
+     </script>
+     <!-- |左边或者右边 -->
+     <script>
+       var str4="aaa123bb";
+       var reg4=/a{3}|b{2}/g;
+       console.log(str4.match(reg4));
+     </script>
+     <!-- 特殊字符匹配 -->
+     <script>
+       var str5="1234^qwer";
+       var reg5=/\^/g;
+       console.log(str5.match(reg5));
+     </script>
+     <!-- 中文\u ,两个起始值：4e00-9fa5-->
+     <script>
+       var str6="123赵廷qwer";
+       var reg6=/[\u4e00-\u9fa5]/g;
+      console.log(str6.match(reg6));
+      console.log(str6.search(reg6));
+     </script>
+     <!-- 替换 -->
+     <script>
+          var str7="abc14qwee56青青";
+          var reg7=/[a-z]{3,4}/g;
+          var str8=str7.replace(reg7,"*");
+          console.log(str8,str7);
+     </script>
+<!-- str9="李勇1谢利来2王新放abc张祖帅def";
+碰上姓名用￥代替 -->
+
+<!-- split分割  -->
+    <script>
+          var str10="abc1234qw345e456yu123i78967plm";
+          var reg10=/\d{3}/g;
+          var arr=str10.split(reg10);
+          console.log(arr,str10);
+    </script>
+</body>
+</html>
